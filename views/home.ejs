@@ -12,6 +12,10 @@
     <%=post.content.substring(0, 100) + " ..."%>
     <a href="/posts/<%=post._id%>">Read More</a>
     </p>
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="post">
+      <button class = "btn btn-secondary delete">Delete</button>
+  </form>
+  <!-- <a class="btn btn-secondary" type = "submit" href="/edit">Edit</a> -->
 
 
     <% }) %>

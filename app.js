@@ -69,6 +69,38 @@ const requestedPostId = req.params.postId;
 
 });
 
+
+app.get("/edit", function(req, res){
+  res.render("edit");
+});
+
+
+// app.put("/posts/:postId",  function(req, res){
+//   Post.findByIdAndUpdate(req.params.postId, req.body.post, function(err){
+//       if(err){
+//          console.log("error");
+//       }
+//       else{
+//         res.redirect("/");
+//       }
+//   });
+// });
+
+
+
+app.post("/posts/:postId", function(req, res){
+  const requestedPostId =  req.params.postId;
+  Post.findByIdAndDelete({_id:requestedPostId}, function(err){
+    if(err){
+      console.log("error");
+    }
+    else{
+      res.redirect("/");
+    }
+
+  });
+});
+
 app.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
 });
