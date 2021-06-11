@@ -56,6 +56,8 @@ app.post("/compose", function(req, res){
   });
 });
 
+//function to add an item
+
 app.get("/posts/:postId", function(req, res){
 
 const requestedPostId = req.params.postId;
