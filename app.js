@@ -85,6 +85,7 @@ app.post("/posts/:postId", function(req, res){
   });
 });
 
+// calling about
 
 app.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
