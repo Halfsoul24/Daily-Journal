@@ -68,7 +68,7 @@ const requestedPostId = req.params.postId;
   });
 
 });
-
+ // function to delete items
 
 app.post("/posts/:postId", function(req, res){
   const requestedPostId =  req.params.postId;
