@@ -7,5 +7,6 @@ https://intense-hollows-08815.herokuapp.com/
   <li> CSS </li>
   <li> MongoDb </li>
   <li> Express </li>
+  <li> Javascript</li>
  </ul>
 
